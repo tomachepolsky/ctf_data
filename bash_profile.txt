@@ -1,0 +1,16 @@
+alias ll="ls -l" #ubuntu consistant
+alias ls='ls -lahtr'
+alias mkdir='mkdir -pv' #make parent directorys on demand
+alias df='df -H' ## set some other defaults ##
+alias du='du -ch' ## set some other defaults ##
+alias curl='curl -kv' #CURL ignore cert errors
+alias grep='grep --color=auto' ## Colorize the grep command output for ease of use (good for log files)##
+alias egrep='egrep --color=auto' ## Colorize the grep command output for ease of use (good for log files)##
+alias fgrep='fgrep --color=auto' ## Colorize the grep command output for ease of use (good for log files)##
+alias cd..='cd ..' ## get rid of command not found ##
+alias nse='ls /usr/share/nmap/scripts | grep '
+alias untar='tar -zxvf ' #auto untar
+alias ping='ping -c 5' #limit to 5 pings
+alias www='python -m SimpleHTTPServer 8000' #start webserver in cwd
+alias nse='ls /usr/share/nmap/scripts | grep ' #nse nessus search
+alias nmapscan='sudo nmap -sSV -p- -vvvvv --version-all -T4 -n -A -Pn'
