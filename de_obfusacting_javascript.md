@@ -121,11 +121,11 @@ var x = location.hash;if (x.charAt(1) == String.fromCharCode(parseInt(97))) {if 
     + `Base64 Encoding/Decoding`
     + `Ascii CharCode Encoding/Decoding`
     + `Hashing - MD5`
-2.What hashing algorithm is used?
+2. What hashing algorithm is used?
     + `MD5`
 3. What is the value of the flag?
     + `FLAG{aNch0R5w0NTB31NTh353RY3R10g5}`
-4.Using 'https://example.com' as a placeholder, what URI would trigger an alert?
+4. Using 'https://example.com' as a placeholder, what URI would trigger an alert?
     + `https://example.com#anchoredjavascript_a78c83b4710e8760280c3250858dce48`
 
 
